@@ -1,0 +1,1 @@
+# helm-json-schemas-sample
