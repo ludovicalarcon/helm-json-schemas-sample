@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "title": "Root Schema",
+  "required": [
+    "appName",
+    "environment",
+    "replicasCount",
+    "image"
+  ],
+  "properties": {
+    "appName": {
+      "type": "string",
+      "description": "the application's name",
+      "minLength": 1
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "dev",
+        "tst",
+        "prd"
+      ]
+    },
+    "replicasCount": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99
+    },
+    "image": {
+      "type": "object",
+      "required": [
+        "repository",
+        "tag"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tag": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

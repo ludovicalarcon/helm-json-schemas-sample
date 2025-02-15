@@ -1,0 +1,6 @@
+image:
+  repository: ""
+  tag: 1.2
+appName:
+environment: foo
+replicasCount: "2"

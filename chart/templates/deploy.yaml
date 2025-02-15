@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+{{ (include "sample.labels" .) | indent 4 }}
+  name: {{ .Values.appName | quote }}
+spec:
+  replicas: {{ .Values.replicasCount }}
+  selector:
+    matchLabels:
+{{ (include "sample.labels" .) | indent 6 }}
+  name: {{ .Values.appName | quote }}
+  template:
+    metadata:
+      labels:
+{{ (include "sample.labels" .) | indent 8 }}
+    spec:
+      containers:
+      - image: {{ (include "sample.image" .) | quote }}
+        name: {{ .Values.appName | quote }}

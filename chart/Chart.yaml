@@ -1,0 +1,8 @@
+apiVersion: v2
+name: json-schemas-sample
+description: A sample helm chart to showcase json schema validation
+type: application
+version: 0.1.0
+home: "https://github.com/ludovicalarcon/helm-json-schemas-sample"
+maintainers:
+  - name: Ludovic Alarcon
