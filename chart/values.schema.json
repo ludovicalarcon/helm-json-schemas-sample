@@ -8,6 +8,7 @@
     "replicasCount",
     "image"
   ],
+  "additionalProperties": false,
   "properties": {
     "appName": {
       "type": "string",

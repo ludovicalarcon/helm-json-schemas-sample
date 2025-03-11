@@ -4,3 +4,4 @@ image:
 appName:
 environment: foo
 replicasCount: "2"
+additionalProperty: "oups"
